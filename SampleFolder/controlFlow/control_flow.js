@@ -49,4 +49,65 @@ let isAuthenticated = true;
 
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated"; 
 
-console.log("Authentication Status:", authenticationStatus);
+console.log("Authentication Status:", authenticationStatus); 
+
+class Person { 
+    constructor(personType)
+    {
+        this.personType = personType; 
+        this.eligibleService = false; 
+    } 
+
+    #serviceAccessExtent 
+
+    assignEligbleService () { 
+
+        switch(this.personType)
+        { 
+            case "Employee": 
+                this.eligibleService = True; 
+                this.accessToDietician = True; 
+                this.#serviceAccessExtent = "Full" 
+            
+            case "Enrolled":
+                this.eligibleService = True; 
+                this.accessToDietician = True;  
+                this.#serviceAccessExtent = "Full" 
+            
+            case "Subscriber": 
+                this.eligibleService = True; 
+                this.accessToDietician = False;  
+                this.#serviceAccessExtent = "Partial"  
+
+            case "Non-Subscriber": 
+                this.eligibleService = False; 
+                this.accessToDietician = False;    
+                this.#serviceAccessExtent = "None"  
+            
+            default: 
+                throw new Error("Invalid user type provided, please provide either 'Employee', 'Enrolled', 'Subscriber', 'Non-Subscriber'")
+
+        }
+    } 
+
+    getServiceExtent()
+    {
+        return this.#serviceAccessExtent; 
+    }
+} 
+
+let member = new Person('Employee'); 
+
+console.log(`This member has ${member.assignEligbleService ? "Access to diet service" : "No access to diet service"} ${member.assignEligbleService ? ", Access to one-on-one sessions with dietician" : ", No Access to one-on-one sessions with dietician"} and their overall access to diet service is ${member.getServiceExtent}`)
+
+member = new Person('Enrolled'); 
+
+console.log(`This member has ${member.assignEligbleService ? "Access to diet service" : "No access to diet service"} ${member.assignEligbleService ? ", Access to one-on-one sessions with dietician" : ", No Access to one-on-one sessions with dietician"} and their overall access to diet service is ${member.getServiceExtent}`)
+
+member = new Person('Subscriber'); 
+
+console.log(`This member has ${member.assignEligbleService ? "Access to diet service" : "No access to diet service"} ${member.assignEligbleService ? ", Access to one-on-one sessions with dietician" : ", No Access to one-on-one sessions with dietician"} and their overall access to diet service is ${member.getServiceExtent}`) 
+
+member = new Person("Non-Subscriber"); 
+
+console.log(`This member has ${member.assignEligbleService ? "Access to diet service" : "No access to diet service"} ${member.assignEligbleService ? ", Access to one-on-one sessions with dietician" : ", No Access to one-on-one sessions with dietician"} and their overall access to diet service is ${member.getServiceExtent}`)
