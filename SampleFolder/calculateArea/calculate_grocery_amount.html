@@ -1,77 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grocery Tracker</title>
 </head>
-
 <body>
-    <h1>Grocery Tracker </h1> 
 
-    <form id="add-additional-items" action="">  
-        <fieldset> 
-        
-        <legend>Add additional Items</legend>
-        <label for="add-item">Item Name</label> 
-        <input type="text" name="add-item" id="add-item"> 
+  <h1>Grocery Tracker</h1>
 
-        <label for="price"> Price </label> 
-        <input type="number" name="price" id="price">  
-        <button type="submit">Add Item</button>
-        </fieldset>
-    </form> 
 
-    <br> 
+  <form id="add-additional-items" action="">
+    <fieldset>
+      <legend>Add additional Items</legend>
 
-    <form id="grocery-list-form" action="">
-        <fieldset>
-            <legend>
-                Enter your grocery list items
-            </legend>
+      <label for="add-item">Item Name</label>
+      <input type="text" name="add-item" id="add-item" />
 
-            <ol class="grocery-list">
-                <li class="grocery-item">
-                    <article class="inline-input">
-                        <label for="item-name-1">Item name</label>
-                        <input type="text" id="item-name-1" name="items[0][name]"
-                            placeholder="Enter the name of your item">
+      <label for="price">Price</label>
+      <input type="number" name="price" id="price" />
 
-                        <label for="item-price-1">Item price</label>
-                        <input type="number" id="item-price-1" name="items[0][price]"
-                            placeholder="Enter the price of your item">
-                    </article>
-                </li>
+      <button type="submit">Add Item</button>
+    </fieldset>
+  </form>
 
-                <li class="grocery-item">
-                    <article class="inline-input">
-                        <label for="item-name-2">Item name</label>
-                        <input type="text" id="item-name-2" name="items[1][name]"
-                            placeholder="Enter the name of your item">
+  <br>
 
-                        <label for="item-price-2">Item price</label>
-                        <input type="number" id="item-price-2" name="items[1][price]"
-                            placeholder="Enter the price of your item">
-                    </article>
-                </li>
 
-                <li class="grocery-item">
-                    <article class="inline-input">
-                        <label for="item-name-3">Item name</label>
-                        <input type="text" id="item-name-3" name="items[2][name]"
-                            placeholder="Enter the name of your item">
+  <form id="grocery-list-form" action="">
+    <fieldset>
+      <legend>Enter your grocery list items</legend>
 
-                        <label for="item-price-3">Item price</label>
-                        <input type="number" id="item-price-3" name="items[2][price]"
-                            placeholder="Enter the price of your item">
-                    </article>
-                </li>
-            </ol>
+      <ol class="grocery-list">
+        <li class="grocery-item">
+          <article class="inline-input">
+            <label for="item-name-0">Item name</label>
+            <input type="text" id="item-name-0" name="items[0][name]" placeholder="Enter the name of your item" />
 
-        </fieldset>
-    </form>
-    <script src="./calculate_grocery_amount.js" onclick="groceryTracker"></script>
+            <label for="item-price-0">Item price</label>
+            <input type="number" id="item-price-0" name="items[0][price]" placeholder="Enter the price of your item" />
+          </article>
+        </li>
+
+        <li class="grocery-item">
+          <article class="inline-input">
+            <label for="item-name-1">Item name</label>
+            <input type="text" id="item-name-1" name="items[1][name]" placeholder="Enter the name of your item" />
+
+            <label for="item-price-1">Item price</label>
+            <input type="number" id="item-price-1" name="items[1][price]" placeholder="Enter the price of your item" />
+          </article>
+        </li>
+
+        <li class="grocery-item">
+          <article class="inline-input">
+            <label for="item-name-2">Item name</label>
+            <input type="text" id="item-name-2" name="items[2][name]" placeholder="Enter the name of your item" />
+
+            <label for="item-price-2">Item price</label>
+            <input type="number" id="item-price-2" name="items[2][price]" placeholder="Enter the price of your item" />
+          </article>
+        </li>
+      </ol>
+
+      <button type="button" id="calculate-total">Calculate Total</button>
+      <p id="total-display"><strong>Total:</strong> R0.00</p>
+    </fieldset>
+  </form>
+
+  <script src="./calculate_grocery_amount.js"></script>
+
 </body>
-
 </html>
