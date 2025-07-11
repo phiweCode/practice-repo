@@ -1,0 +1,16 @@
+{
+    "news": [{
+        "title": "New AI Breakthrough",
+        "author": "Jane Doe",
+        "date": "2023-10-01",
+        "content": "A new breakthrough in artificial intelligence has been announced, promising to revolutionize the industry.",
+        "tags": ["AI", "Technology", "Innovation"]
+    },
+     {
+        "title": "New AI Breakthrough",
+        "author": "Jane Doe",
+        "date": "2023-10-01",
+        "content": "A new breakthrough in artificial intelligence has been announced, promising to revolutionize the industry.",
+        "tags": ["AI", "Technology", "Innovation"]
+    }]
+ }
